@@ -1,15 +1,14 @@
 # Cloudflare Workers PR Preview
 
 [![CI status][github-action-image]][github-action-url]
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fshidil%2Fcloudflare-workers-preview.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fshidil%2Fcloudflare-workers-preview?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmsutkowski%2Fcloudflare-workers-preview.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmsutkowski%2Fcloudflare-workers-preview?ref=badge_shield)
 
-[github-action-image]: https://github.com/shidil/cloudflare-workers-preview/workflows/build-test/badge.svg
-[github-action-url]: https://github.com/shidil/cloudflare-workers-preview/actions?query=workflow%3Abuild-test
+[github-action-image]: https://github.com/msutkowski/cloudflare-workers-preview/workflows/build-test/badge.svg
+[github-action-url]: https://github.com/msutkowski/cloudflare-workers-preview/actions?query=workflow%3Abuild-test
 
 A GitHub action that previews cloudflare workers in [workers.dev](https://workers.dev/) for your pull requests.
 
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/4880359/150688614-3759ccc6-ac85-4753-a455-c8a6ae9616b1.png">
-
 
 ### Pros
 
@@ -32,13 +31,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: shidil/cloudflare-workers-preview@v1
+      - uses: msutkowski/cloudflare-workers-preview@v1
         id: preview_step
         with:
           cf_token: ${{ secrets.CF_API_TOKEN }}
           cf_account: ${{ secrets.CF_ACCOUNT_ID }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          domain: shidil.workers.dev
+          domain: msutkowski.workers.dev
           project_path: apps/app1
           build: |
             npm install
@@ -61,12 +60,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: shidil/cloudflare-workers-preview@v1
+      - uses: msutkowski/cloudflare-workers-preview@v1
         with:
           cf_token: ${{ secrets.CF_API_TOKEN }}
           cf_account: ${{ secrets.CF_ACCOUNT_ID }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          domain: shidil.workers.dev
+          domain: msutkowski.workers.dev
           project_path: apps/app1
           build: |
             npm install
@@ -75,12 +74,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: shidil/cloudflare-workers-preview@v1
+      - uses: msutkowski/cloudflare-workers-preview@v1
         with:
           cf_token: ${{ secrets.CF_API_TOKEN }}
           cf_account: ${{ secrets.CF_ACCOUNT_ID }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          domain: shidil.workers.dev
+          domain: msutkowski.workers.dev
           project_path: apps/app1
           build: |
             npm install
@@ -89,8 +88,8 @@ jobs:
 
 The preview website urls will be:
 
-- `https://preview-job-1-pr-{{pr.number}}.shidil.workers.dev`
-- `https://preview-job-2-pr-{{pr.number}}.shidil.workers.dev`
+- `https://preview-job-1-pr-{{pr.number}}.msutkowski.workers.dev`
+- `https://preview-job-2-pr-{{pr.number}}.msutkowski.workers.dev`
 
 ### Teardown
 
@@ -110,12 +109,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: shidil/cloudflare-workers-preview@v1
+      - uses: msutkowski/cloudflare-workers-preview@v1
         with:
           cf_token: ${{ secrets.CF_API_TOKEN }}
           cf_account: ${{ secrets.CF_ACCOUNT_ID }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          domain: shidil.workers.dev
+          domain: msutkowski.workers.dev
           teardown: 'true'
           build: |
             npm install
@@ -141,6 +140,6 @@ jobs:
 
 - [afc163/surge-preview](https://github.com/afc163/surge-preview)
 
-
 ## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fshidil%2Fcloudflare-workers-preview.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fshidil%2Fcloudflare-workers-preview?ref=badge_large)
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmsutkowski%2Fcloudflare-workers-preview.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmsutkowski%2Fcloudflare-workers-preview?ref=badge_large)
