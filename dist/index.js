@@ -148,7 +148,7 @@ const execNpxCommand = ({ command, options, }) => __awaiter(void 0, void 0, void
 });
 exports.execNpxCommand = execNpxCommand;
 const wranglerPublish = (workingDirectory, environment, cloudflareAccount, cfApiToken) => __awaiter(void 0, void 0, void 0, function* () {
-    const wrangler = '@cloudflare/wrangler';
+    const wrangler = 'wrangler';
     // Add new environment config to wrangler config file.
     // [env.preview-job-pr-123]
     // name = "env.preview-job-pr-123"
@@ -179,7 +179,7 @@ const formatImage = ({ buildingLogUrl, imageUrl, }) => {
 };
 exports.formatImage = formatImage;
 const getCommentFooter = () => {
-    return '<sub>[cloudflare-workers-preview](https://github.com/shidil/cloudflare-workers-preview)</sub>';
+    return '<sub>[cloudflare-workers-preview](https://github.com/msutkowski/cloudflare-workers-preview)</sub>';
 };
 exports.getCommentFooter = getCommentFooter;
 

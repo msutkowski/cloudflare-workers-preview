@@ -11,12 +11,12 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         id: preview_step
-        name: test shidi/cloudflare-workers-preview
+        name: test msutkowski/cloudflare-workers-preview
         with:
           cf_token: ${{ secrets.CF_API_TOKEN }}
           cf_account: ${{ secrets.CF_ACCOUNT_ID }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          domain: qvistn.workers.dev
+          domain: msutkowski.workers.dev
           teardown: 'true'
           project_path: preview/my-site
           build: |
@@ -29,12 +29,12 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         id: preview_action
-        name: test shidi/cloudflare-workers-preview
+        name: test msutkowski/cloudflare-workers-preview
         with:
           cf_token: ${{ secrets.CF_API_TOKEN }}
           cf_account: ${{ secrets.CF_ACCOUNT_ID }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          domain: qvistn.workers.dev
+          domain: msutkowski.workers.dev
           teardown: 'true'
           project_path: preview/my-site
           build: |

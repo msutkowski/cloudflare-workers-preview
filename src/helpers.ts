@@ -29,7 +29,7 @@ export const wranglerPublish = async (
   cloudflareAccount: string,
   cfApiToken: string,
 ) => {
-  const wrangler = '@cloudflare/wrangler';
+  const wrangler = 'wrangler';
 
   // Add new environment config to wrangler config file.
   // [env.preview-job-pr-123]
@@ -81,5 +81,5 @@ export const formatImage = ({
 };
 
 export const getCommentFooter = () => {
-  return '<sub>[cloudflare-workers-preview](https://github.com/shidil/cloudflare-workers-preview)</sub>';
+  return '<sub>[cloudflare-workers-preview](https://github.com/msutkowski/cloudflare-workers-preview)</sub>';
 };

@@ -1,6 +1,6 @@
 name: 'Cloudflare Workers Preview'
 description: 'Deploy Cloudflare workers preview for every pull request with Wrangler'
-author: 'shidil'
+author: 'msutkowski'
 inputs:
   cf_token:
     description: 'Cloudflare token (Edit Workers Scope)'

@@ -2,11 +2,10 @@
   "name": "cloudflare-workers-preview",
   "version": "1.0.0",
   "private": false,
-  "description": "Preview cloudflare workers for every pull request",
+  "description": "Preview cloudflare workers for every pull request using wrangler2",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
-    "build-preview": "node ./utils/gen-preview.js",
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
@@ -18,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shidil/cloudflare-workers-preview.git"
+    "url": "git+https://github.com/msutkowski/cloudflare-workers-preview.git"
   },
   "keywords": [
     "actions",
